@@ -1,0 +1,290 @@
+/* reset */
+
+*{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    box-sizing:border-box;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* importados */
+
+@font-face {
+    font-family: "Icecreams";
+    src: url("../assets/font/Icecreams.ttf")
+}
+
+@font-face{
+    font-family: "Start";
+    src: url("../assets/font/Start.otf")
+}
+
+@font-face {
+    font-family: "Starborn";
+    src: url("../assets/font/Starborn.ttf");
+}
+
+
+/* variables */
+$ic: "Icecreams";
+$sb: "Starborn";
+$st: "Start";
+
+$mar: rgb(110, 48, 16);
+$ama1: rgb(211, 175, 122);
+$ama2: rgb(241, 197, 107);
+$crema: rgb(251, 232, 190);
+
+
+/* clases */
+
+.xdefecto, h3, p{
+    font-family:$st;
+    font-size:2em;
+    list-style:none;
+}
+
+.divisores{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border: 10px solid $crema;
+    margin: 5px;
+}
+
+.carrusel{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.direccionables{
+    @extend h2;
+}
+.direccionables:hover{
+    color:rgb(210, 33, 41);
+    transition:0.5s;
+}
+
+.frutales{
+    color:rgb(214, 32, 41)
+}
+
+.dulces{
+    color:rgb(192, 113, 29)
+}
+
+.chocolates{
+    color:rgb(110, 48, 16)
+}
+
+.cremas{
+    color:rgb(203, 190, 167)
+}
+
+
+/* formulario */
+
+form{
+    box-sizing: border-box;
+    border: 1em solid $ama1;
+    margin: 5px;
+    border-radius:30px;
+    label{
+        @extend .xdefecto
+    }
+    .casillas{
+        box-sizing: border-box;
+        border: 5px solid rgb(110, 48, 16);
+        margin: 5px;
+        border-radius:5px;
+        font-family:$st;
+        font-size:1.5em;
+    }
+    .casillas:focus{
+        background-color:$ama2;
+        transition: 0.3s;
+    }
+    .boton{
+        box-sizing:border-box;
+        border:5px solid rgb(110, 48, 16);
+        border-radius: 5px;
+        background-color: $ama1;
+        font-family:$st;
+        font-size: 2em;
+        color:rgb(67, 40, 24);
+    }
+    .boton:hover{
+        background-color:rgb(110, 48, 16);
+        color:$ama2;
+        transition:0.3s;
+    }
+}
+
+
+/* cuerpo */
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $crema;
+    header{
+        div{
+            background-color: rgb(122,58,35);
+            h1{
+                color:$ama2;
+                font-family:$ic;
+            }
+            nav{
+                ul{
+                    display:flex;
+                    flex-direction: row;
+                    list-style: none;
+                    justify-content: space-evenly;
+                    a{
+                        color:$ama2;
+                        font-family:$st;
+                    }
+                    a:hover{
+                        color:rgb(65, 26, 6);
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        flex: 1;
+        margin-bottom:2em;
+        margin-top:2em;
+        h2{
+            color:rgb(187, 90, 49);
+            font-family:$sb;
+            box-sizing:border-box;
+            border-bottom: 10px solid $crema;
+            border-top: 10px solid $crema;
+        }
+        img{     
+            box-sizing: border-box;
+            border: 1em solid $ama1;
+            border-radius:1em;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:3em;
+        }
+    }
+    footer{
+        background-color: rgb(67, 40, 24);
+        section{
+            color:rgb(174, 158, 134);
+            display: flex;
+            justify-content: space-between;
+            div{
+                color:rgb(236, 223, 198);
+            }
+        }
+}
+}
+
+
+/* mediaq mobile */
+
+@media screen and (max-width:480px){
+    .o_mob{
+        display:none;
+    }
+    .carrusel{
+        img{
+            border:0em;
+        }
+    }
+    body{
+        h1{
+            font-size:7em;
+        }
+        h2{
+            font-size:1.8em;
+        }
+        ul{
+            a{
+                font-size:3em;
+            }
+        }
+        footer img{
+            width:20%
+        }
+    }
+    
+}
+
+
+/* mediaq tablet */
+
+@media screen and (max-width:950px) and (min-width:481px){
+    .o_tab{
+        display:none;
+    }
+    body{
+        h1{
+            font-size:8em; 
+        }
+        h2{
+            font-size: 2em;
+        }
+        ul{
+            a{
+                font-size:2em;
+            }
+        }
+        footer{
+            padding-top:1em;
+            img{
+                width:30%
+            }
+        }
+    }
+}
+
+
+/* mediaq desktop */
+
+@media screen and (min-width:951px){
+    .o_desk{
+        display:none;
+    }
+    body{
+        h1{
+            font-size:8em; 
+        }
+        h2{
+            font-size:2em;
+        }
+        
+        main {
+            img{
+            margin-left:0.5em;
+            margin-right:0.5em;
+            }
+        }
+        
+        ul{
+            a{
+                font-size:2.5em;
+            }
+        }
+        footer{
+            padding-top:1em;
+            img{
+                width:10%
+            }
+        }
+    }
+}

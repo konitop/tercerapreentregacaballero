@@ -1,0 +1,231 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* importados */
+@font-face {
+  font-family: "Icecreams";
+  src: url("../assets/font/Icecreams.ttf");
+}
+@font-face {
+  font-family: "Start";
+  src: url("../assets/font/Start.otf");
+}
+@font-face {
+  font-family: "Starborn";
+  src: url("../assets/font/Starborn.ttf");
+}
+/* variables */
+/* clases */
+.xdefecto, form label, h3, p {
+  font-family: "Start";
+  font-size: 2em;
+  list-style: none;
+}
+
+.divisores {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  border: 10px solid rgb(251, 232, 190);
+  margin: 5px;
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.direccionables:hover {
+  color: rgb(210, 33, 41);
+  transition: 0.5s;
+}
+
+.frutales {
+  color: rgb(214, 32, 41);
+}
+
+.dulces {
+  color: rgb(192, 113, 29);
+}
+
+.chocolates {
+  color: rgb(110, 48, 16);
+}
+
+.cremas {
+  color: rgb(203, 190, 167);
+}
+
+/* formulario */
+form {
+  box-sizing: border-box;
+  border: 1em solid rgb(211, 175, 122);
+  margin: 5px;
+  border-radius: 30px;
+}
+form .casillas {
+  box-sizing: border-box;
+  border: 5px solid rgb(110, 48, 16);
+  margin: 5px;
+  border-radius: 5px;
+  font-family: "Start";
+  font-size: 1.5em;
+}
+form .casillas:focus {
+  background-color: rgb(241, 197, 107);
+  transition: 0.3s;
+}
+form .boton {
+  box-sizing: border-box;
+  border: 5px solid rgb(110, 48, 16);
+  border-radius: 5px;
+  background-color: rgb(211, 175, 122);
+  font-family: "Start";
+  font-size: 2em;
+  color: rgb(67, 40, 24);
+}
+form .boton:hover {
+  background-color: rgb(110, 48, 16);
+  color: rgb(241, 197, 107);
+  transition: 0.3s;
+}
+
+/* cuerpo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(251, 232, 190);
+}
+body header div {
+  background-color: rgb(122, 58, 35);
+}
+body header div h1 {
+  color: rgb(241, 197, 107);
+  font-family: "Icecreams";
+}
+body header div nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+}
+body header div nav ul a {
+  color: rgb(241, 197, 107);
+  font-family: "Start";
+}
+body header div nav ul a:hover {
+  color: rgb(65, 26, 6);
+}
+body main {
+  flex: 1;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+body main h2, body main .direccionables {
+  color: rgb(187, 90, 49);
+  font-family: "Starborn";
+  box-sizing: border-box;
+  border-bottom: 10px solid rgb(251, 232, 190);
+  border-top: 10px solid rgb(251, 232, 190);
+}
+body main img {
+  box-sizing: border-box;
+  border: 1em solid rgb(211, 175, 122);
+  border-radius: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+body footer {
+  background-color: rgb(67, 40, 24);
+}
+body footer section {
+  color: rgb(174, 158, 134);
+  display: flex;
+  justify-content: space-between;
+}
+body footer section div {
+  color: rgb(236, 223, 198);
+}
+
+/* mediaq mobile */
+@media screen and (max-width: 480px) {
+  .o_mob {
+    display: none;
+  }
+  .carrusel img {
+    border: 0em;
+  }
+  body h1 {
+    font-size: 7em;
+  }
+  body h2, body .direccionables {
+    font-size: 1.8em;
+  }
+  body ul a {
+    font-size: 3em;
+  }
+  body footer img {
+    width: 20%;
+  }
+}
+/* mediaq tablet */
+@media screen and (max-width: 950px) and (min-width: 481px) {
+  .o_tab {
+    display: none;
+  }
+  body h1 {
+    font-size: 8em;
+  }
+  body h2, body .direccionables {
+    font-size: 2em;
+  }
+  body ul a {
+    font-size: 2em;
+  }
+  body footer {
+    padding-top: 1em;
+  }
+  body footer img {
+    width: 30%;
+  }
+}
+/* mediaq desktop */
+@media screen and (min-width: 951px) {
+  .o_desk {
+    display: none;
+  }
+  body h1 {
+    font-size: 8em;
+  }
+  body h2, body .direccionables {
+    font-size: 2em;
+  }
+  body main img {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  body ul a {
+    font-size: 2.5em;
+  }
+  body footer {
+    padding-top: 1em;
+  }
+  body footer img {
+    width: 10%;
+  }
+}/*# sourceMappingURL=estilos.css.map */
